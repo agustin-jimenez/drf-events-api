@@ -1,0 +1,23 @@
+[report]
+
+exclude_lines =
+	coverage: no-coverage
+
+skip_empty = True
+
+omit =
+	manage.py
+    */migrations/*
+    */test/*
+    */apps.py
+    */conftest.py
+    events/asgi.py
+    events/settings
+    events/settings/*
+    **/management/commands/*
+
+
+
+[html]
+
+directory = reporting/coverage_report
