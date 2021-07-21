@@ -1,0 +1,15 @@
+version: '3.2'
+services:
+
+  api:
+    build:
+      context: .
+      args:
+        - ENVIRONMENT:development
+    env_file:
+      - ./local/.env
+    volumes:
+      - ./src:/src
+    ports:
+      - "8000:8000"
+    command: sh deploy.sh
