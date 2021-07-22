@@ -11,9 +11,7 @@ omit =
     */test/*
     */apps.py
     */conftest.py
-    events/asgi.py
-    events/settings
-    events/settings/*
+    events/*
     **/management/commands/*
 
 
