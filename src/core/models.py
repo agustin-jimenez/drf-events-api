@@ -1,4 +1,6 @@
 from django.db import models
+from django.core.validators import MinValueValidator
+from django.core.exceptions import ValidationError
 
 
 class Event(models.Model):
@@ -16,4 +18,12 @@ class Event(models.Model):
         null=False,
         default=1,
         verbose_name='Count',
+        validators=[
+            MinValueValidator(1),
+        ],
     )
+
+    def save(self, *args, **kwargs):
+        if self.count == 0:
+            raise ValidationError('Count minimum value is 1')
+        super(Event, self).save(*args, **kwargs)
