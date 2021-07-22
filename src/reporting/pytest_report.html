@@ -420,7 +420,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>pytest_report.html</h1>
-    <p>Report generated on 22-Jul-2021 at 08:12:28 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 22-Jul-2021 at 10:24:38 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -436,8 +436,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.9.5</td></tr></table>
     <h2>Summary</h2>
-    <p>2 tests ran in 0.93 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">2 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>3 tests ran in 0.98 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -457,7 +457,7 @@ function filter_table(elem) {
         <tr>
           <td class="extra" colspan="4">
             <div class="log"> -----------------------------Captured stdout setup------------------------------ <br/>Operations to perform:
-  Synchronize unmigrated apps: django_extensions, django_filters, messages, rest_framework, staticfiles
+  Synchronize unmigrated apps: django_extensions, django_filters, drf_yasg, messages, rest_framework, staticfiles
   Apply all migrations: admin, auth, contenttypes, core, sessions
 Synchronizing apps without migrations:
   Creating tables...
@@ -488,6 +488,15 @@ Running migrations:
         <tr>
           <td class="col-result">Passed</td>
           <td class="col-name">core/tests/test_models.py::TestsEvents::test_creating_event_successfully</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">core/tests/test_models.py::TestsEvents::test_creating_an_event_with_zero_count_raises_error</td>
           <td class="col-duration">0.00</td>
           <td class="col-links"></td></tr>
         <tr>
