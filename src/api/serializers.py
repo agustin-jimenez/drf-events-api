@@ -6,4 +6,4 @@ from core.models import Event
 class EventSerializer(serializers.ModelSerializer):
     class Meta:
         model = Event
-        fields = ['date', 'name', 'count']
+        fields = ['date', 'event', 'count']

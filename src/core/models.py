@@ -3,7 +3,7 @@ from django.db import models
 
 class Event(models.Model):
 
-    name = models.CharField(
+    event = models.CharField(
         null=False,
         verbose_name='Event Name',
         max_length=255
