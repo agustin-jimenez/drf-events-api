@@ -10,4 +10,5 @@
 
 # Run server
     # python manage.py collectstatic --no-input 
-    gunicorn --workers=2 --bind=0.0.0.0:8000 events.wsgi:application
+    # gunicorn --workers=2 --bind=0.0.0.0:8000 events.wsgi:application
+    python manage.py runserver 0.0.0.0:8000

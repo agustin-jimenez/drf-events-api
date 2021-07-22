@@ -12,7 +12,7 @@ class TestsEventSerialization:
     @pytest.fixture()
     def event(self):
         instance = Event.objects.create(
-            name='some',
+            event='some',
             count=2,
         )
         yield instance
@@ -20,7 +20,7 @@ class TestsEventSerialization:
     def test_serializing_an_event_object(self, event):
         spected = {
             'date': event.date.isoformat(),
-            'name': event.name,
+            'event': event.event,
             'count': event.count,
         }
         actual = EventSerializer(event, many=False).data
