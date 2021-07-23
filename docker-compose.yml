@@ -1,7 +1,16 @@
 version: '3.2'
 services:
 
-  api:
+  postgres:
+    image: postgres:12-alpine
+    volumes: 
+      - ./local/postgres:/var/lib/postgresql/data
+    env_file:
+      - ./local/.env
+    ports:
+      - "6543:5432"
+
+  api: &api
     build:
       context: .
       args:
@@ -13,3 +22,32 @@ services:
     ports:
       - "8000:8000"
     command: sh deploy.sh
+    depends_on:
+      - postgres
+      - celery-beat
+
+  celery-worker:
+    <<: *api
+    command: sh -c 'celery -A events worker'
+    ports:
+      - "8001:8001"
+    volumes:
+      - ./src:/src
+    depends_on:
+      - redis
+
+  celery-beat:
+    <<: *api
+    command: sh -c 'celery -A events beat'
+    ports:
+      - "8002:8002"
+    volumes:
+      - ./src:/src
+    depends_on:
+      - celery-worker
+
+  redis:
+    image: redis:6.2-alpine
+    command: redis-server --requirepass 12345
+    ports:
+      - 6379:6379
