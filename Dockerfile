@@ -4,7 +4,7 @@
 FROM python:3.9-alpine
 
 LABEL mantainer="Agustin Jimenez"\
-      version="0.0.1"\
+      version="1.0.0"\
       description="Events tracker API"
 
 # Environment vars
@@ -24,8 +24,10 @@ LABEL mantainer="Agustin Jimenez"\
     RUN apk add \
             --update \
             --no-cache \
+            postgresql-client \
             jpeg-dev \
             zlib-dev \
+            py3-requests \
             curl-dev \
             libressl-dev \
         && apk add \
@@ -35,6 +37,7 @@ LABEL mantainer="Agustin Jimenez"\
             .tmp-build-deps \
             gcc g++ libc-dev \
             linux-headers \
+            postgresql-dev \
         && pip install \
             -r /requirements_base.txt \
             -r /requirements_${ENVIRONMENT}.txt \
