@@ -1,8 +1,12 @@
 from rest_framework import mixins, viewsets
 from rest_framework.permissions import AllowAny
+from rest_framework.decorators import api_view
+
 import django_filters.rest_framework as filters
+from django.http import HttpResponse
 
 from core.models import Event
+from core.plotting import Plot
 from api.serializers import EventSerializer
 
 
@@ -30,3 +34,11 @@ class EventsListCreateViewSet(
     permission_classes = (AllowAny,)
     filterset_class = EventsFilter
     queryset = Event.objects.all()
+
+
+@api_view()
+def plot_events_from_event_name(request, event):
+    return HttpResponse(
+            Plot(event).get_histogram(),
+            content_type="image/png"
+          )
