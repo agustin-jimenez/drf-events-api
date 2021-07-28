@@ -16,6 +16,6 @@ Source code isolated from the repository configuration files
 # Api
 Exposed API logic
 # Core
-Main componets like ORM logic and custom logic
+ORM and custom logic
 # Events
 Django repository main directory
