@@ -10,7 +10,7 @@ class Event(models.Model):
         verbose_name='Event Name',
         max_length=255
     )
-    date = models.DateField(
+    date = models.DateTimeField(
         auto_now_add=True,
         verbose_name='Date Created',
     )
