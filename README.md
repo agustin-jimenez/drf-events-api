@@ -26,3 +26,6 @@ Please make sure to update tests as appropriate.
 
 ## License
 MIT License. See [LICENSE](LICENSE)
+
+## Maintenance
+Developed and maintain by [Agustin Jimenez](https://bit.ly/agustin-back)
