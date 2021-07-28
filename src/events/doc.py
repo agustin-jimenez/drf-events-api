@@ -7,6 +7,8 @@ ___
 
 Event tracker REST API
 
+Source Code [HERE](https://github.com/agustin-jimenez/drf-events-api)
+
 *Developed and maintained by* **[Agustin Jimenez](https://bit.ly/agustin-back)**
 """
 
