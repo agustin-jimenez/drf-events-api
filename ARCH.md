@@ -1,10 +1,10 @@
 # Directories structure
-/
-|- [local](#Local)
-|- [requirements](#Requirements)
-|- [src](#Src)
-    |- [api](#Api)
-    |- [core](#Core)
+/ \
+|- [local](#Local) \
+|- [requirements](#Requirements) \
+|- [src](#Src) \
+    |- [api](#Api) \
+    |- [core](#Core) \
     |- [events](#Events)
 
 # Local
