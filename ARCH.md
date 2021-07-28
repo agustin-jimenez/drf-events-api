@@ -3,9 +3,9 @@
 |- [local](#Local) \
 |- [requirements](#Requirements) \
 |- [src](#Src) \
-____ |- [api](#Api) \
-____ |- [core](#Core) \
-____ |- [events](#Events)
+.._ |- [api](#Api) \
+.._ |- [core](#Core) \
+.._ |- [events](#Events)
 
 # Local
 Local development files and databases
