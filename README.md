@@ -1,5 +1,5 @@
 # drf-events-api
-[Events tracker REST API](https://google.com)
+[Events tracker REST API](https://bit.ly/drf-events-api)
 
 ## Install Requirements
 - Docker
