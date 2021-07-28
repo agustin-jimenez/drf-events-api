@@ -420,7 +420,7 @@ function filter_table(elem) {
 }
 </script>
     <h1>pytest_report.html</h1>
-    <p>Report generated on 22-Jul-2021 at 10:41:51 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
+    <p>Report generated on 26-Jul-2021 at 09:58:28 by <a href="https://pypi.python.org/pypi/pytest-html">pytest-html</a> v2.1.1</p>
     <h2>Environment</h2>
     <table id="environment">
       <tr>
@@ -436,8 +436,8 @@ function filter_table(elem) {
         <td>Python</td>
         <td>3.9.5</td></tr></table>
     <h2>Summary</h2>
-    <p>3 tests ran in 0.95 seconds. </p>
-    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">3 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">0 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
+    <p>6 tests ran in 4.45 seconds. </p>
+    <p class="filter" hidden="true">(Un)check the boxes to filter the results.</p><input checked="true" class="filter" data-test-result="passed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="passed">5 passed</span>, <input checked="true" class="filter" data-test-result="skipped" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="skipped">0 skipped</span>, <input checked="true" class="filter" data-test-result="failed" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="failed">1 failed</span>, <input checked="true" class="filter" data-test-result="error" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="error">0 errors</span>, <input checked="true" class="filter" data-test-result="xfailed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xfailed">0 expected failures</span>, <input checked="true" class="filter" data-test-result="xpassed" disabled="true" hidden="true" name="filter_checkbox" onChange="filter_table(this)" type="checkbox"/><span class="xpassed">0 unexpected passes</span>
     <h2>Results</h2>
     <table id="results-table">
       <thead id="results-table-head">
@@ -448,11 +448,20 @@ function filter_table(elem) {
           <th>Links</th></tr>
         <tr hidden="true" id="not-found-message">
           <th colspan="4">No results found. Try to check the filters</th></tr></thead>
+      <tbody class="failed results-table-row">
+        <tr>
+          <td class="col-result">Failed</td>
+          <td class="col-name">core/tests/test_plotting.py::TestsPlot::test_creating_a_plot_instance_successfully</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="log">self = &lt;core.tests.test_plotting.TestsPlot object at 0x7f72ac875130&gt;<br/><br/>    def test_creating_a_plot_instance_successfully(self):<br/>        &quot;&quot;&quot;Test creating a plot instance without raising error<br/>        &quot;&quot;&quot;<br/>        eventName = &#x27;test&#x27;<br/>        plot = Plot(eventName)<br/>        assert isinstance(plot, Plot)<br/>        assert plot.eventName == eventName<br/>&gt;       assert plot.qs == Event.objects.filter(event=eventName)<br/><span class="error">E       assert &lt;QuerySet []&gt; == &lt;QuerySet []&gt;</span><br/><span class="error">E         +&lt;QuerySet []&gt;</span><br/><span class="error">E         -&lt;QuerySet []&gt;</span><br/><span class="error">E         Full diff:</span><br/><span class="error">E           &lt;QuerySet []&gt;</span><br/><br/>core/tests/test_plotting.py:19: AssertionError<br/></div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>
-          <td class="col-name">api/tests/test_serializers.py::TestsEventSerialization::test_serializing_an_event_object</td>
-          <td class="col-duration">0.00</td>
+          <td class="col-name">api/tests/test_endpoints.py::TestsPublicEvents::test_creating_en_event</td>
+          <td class="col-duration">0.11</td>
           <td class="col-links"></td></tr>
         <tr>
           <td class="extra" colspan="4">
@@ -482,8 +491,26 @@ Running migrations:
   Applying auth.0012_alter_user_first_name_max_length... OK
   Applying core.0001_initial... OK
   Applying sessions.0001_initial... OK
-<br/> -----------------------------Captured stderr setup------------------------------ <br/>Creating test database for alias &#x27;default&#x27; (&#x27;file:memorydb_default?mode=memory&amp;cache=shared&#x27;)...
+<br/> -----------------------------Captured stderr setup------------------------------ <br/>Creating test database for alias &#x27;default&#x27; (&#x27;test_events&#x27;)...
 <br/></div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">api/tests/test_endpoints.py::TestsPublicEvents::test_listing_events</td>
+          <td class="col-duration">0.01</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
+      <tbody class="passed results-table-row">
+        <tr>
+          <td class="col-result">Passed</td>
+          <td class="col-name">api/tests/test_serializers.py::TestsEventSerialization::test_serializing_an_event_object</td>
+          <td class="col-duration">0.00</td>
+          <td class="col-links"></td></tr>
+        <tr>
+          <td class="extra" colspan="4">
+            <div class="empty log">No log output captured.</div></td></tr></tbody>
       <tbody class="passed results-table-row">
         <tr>
           <td class="col-result">Passed</td>

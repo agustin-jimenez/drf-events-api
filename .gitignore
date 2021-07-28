@@ -131,3 +131,6 @@ dmypy.json
 # Emacs
 \#*\#
 .\#*
+
+# Local environment
+local/postgres
