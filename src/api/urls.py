@@ -12,4 +12,5 @@ public.register("event", EventsListCreateViewSet, basename='events')
 
 urlpatterns = [
     path("", include(public.urls)),
+    path("plot/<str:event>/", plot_events_from_event_name, name='plot'),
 ]
