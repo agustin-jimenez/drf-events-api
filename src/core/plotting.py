@@ -1,5 +1,5 @@
 import plotly.express as px
-from base64 import b64encode
+from pandas import DataFrame
 
 from core.models import Event
 
@@ -9,13 +9,13 @@ class Plot:
     def __init__(self, eventName):
         self.eventName = eventName
         self.qs = Event.objects.filter(event=eventName)
+        self.create_df_from_queryset()
 
-    def encoding(self, bStr):
-        return "data:image/png;base64," + b64encode(bStr).decode()
+    def create_df_from_queryset(self):
+        self.df = DataFrame(list(self.qs.values('date', 'count')))
 
     def get_histogram(self):
-        fig = px.histogram()
-        imgBytes = fig.to_image(format="png")
-        return self.encoding(imgBytes)
+        fig = px.histogram(self.df, x='date')
+        return fig.to_image(format="png")
 
 
